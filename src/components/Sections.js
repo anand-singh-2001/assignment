@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Cards from "./Cards";
 import data from "../data.json";
 
 const Sections = ({ dark }) => {
   const [showMore, setShowMore] = useState([]);
 
-  const handleShow = (sec_no) => {
+  const handleShow = useCallback((sec_no) => {
     setShowMore((prev) => {
       if (prev.includes(sec_no)) {
         return prev.filter((ele) => ele !== sec_no);
       }
       return [...prev, sec_no];
     });
-  };
+  }, []);
 
   return (
     <div className="sections">
@@ -23,8 +23,8 @@ const Sections = ({ dark }) => {
             className={(dark && "dark_mode cards_section") || "cards_section"}>
             {data.Card_array.filter((card) => card.parent_sec_no === sec.sec_no)
               .slice(0, 3)
-              .map((ele) => (
-                <Cards card={ele} />
+              .map((ele, id) => (
+                <Cards card={ele} key={id} />
               ))}
 
             {showMore.includes(sec.sec_no) &&
@@ -32,7 +32,7 @@ const Sections = ({ dark }) => {
                 (card) => card.parent_sec_no === sec.sec_no
               )
                 .slice(3)
-                .map((ele) => <Cards card={ele} dark={dark} />)}
+                .map((ele, id) => <Cards card={ele} dark={dark} key={id} />)}
 
             {data.Card_array.filter((card) => card.parent_sec_no === sec.sec_no)
               .length > 3 && (

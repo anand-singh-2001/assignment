@@ -2,7 +2,9 @@ import React from "react";
 
 const Cards = ({ card, dark }) => {
   return (
-    <div className={(dark && "dark_mode single_card") || "single_card"}>
+    <div
+      className={(dark && "dark_mode single_card") || "single_card"}
+      style={{ cursor: card.cursor ? "pointer" : "none" }}>
       <h4>{card.card_title}</h4>
 
       {card.data === true && card.data_type === "number" ? (
