@@ -12,11 +12,9 @@
 }
 .nav_btn {
   margin: auto;
-  /* margin-left: 500px; */
   margin-right: 20px;
   width: 30px;
   border: none;
-  /* border-radius: 20px; */
   height: 30px;
   background: white;
   cursor: pointer;
@@ -50,10 +48,7 @@
 
 .carousel {
   margin: 0 auto;
-  /* margin-top: 10px; */
-  /* border: 2px solid black; */
   width: 100vw;
-  /* border-radius: 5px; */
 }
 .carousel.carousel-slider {
   position: relative;
@@ -62,16 +57,12 @@
   border: 2px solid;
 }
 .sections {
-  /* margin: 10px 20px 10px 20px; */
   background-color: #f1eddb;
 }
 .section {
-  /* border: 2px solid; */
-  /* margin: 20px; */
   text-align: center;
   height: auto;
-  /* padding: 20px; */
-  /* background-color: #f1eddb; */
+
   padding-top: 20px;
   color: black;
   padding-bottom: 20px;
@@ -82,7 +73,6 @@
 }
 .cards_section {
   display: flex;
-  /* grid-row: auto; */
   gap: 20px;
   flex-wrap: wrap;
   align-items: center;
@@ -94,11 +84,9 @@
   height: 300px;
   width: 25%;
   border: 2px solid;
-  /* margin: 0 20px; */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   background-color: #f1eddb;
 }
 
@@ -106,9 +94,7 @@
   z-index: 10;
   background-color: beige;
 }
-/* .card > span {
-  width: 200px;
-} */
+
 .single_card:hover {
   .overlay {
     opacity: 1;
@@ -212,12 +198,6 @@
     padding-left: 20px;
   }
 }
-
-/* @media screen and (min-width: 380px) {
-  .single_card {
-    width: 70%;
-  }
-} */
 
 @media screen and (max-width: 550px) {
   .single_card {

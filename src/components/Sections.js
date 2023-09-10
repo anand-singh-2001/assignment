@@ -4,7 +4,7 @@ import data from "../data.json";
 
 const Sections = ({ dark }) => {
   const [showMore, setShowMore] = useState([]);
-  // const array=[]
+
   const handleShow = (sec_no) => {
     setShowMore((prev) => {
       if (prev.includes(sec_no)) {
